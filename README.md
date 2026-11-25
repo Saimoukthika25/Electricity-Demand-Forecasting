@@ -1,139 +1,266 @@
-Electricity Demand and Peak Load Forecasting using Machine Learning
-# Electricity Demand Forecasting Using Machine Learning
+# ⚡ Electricity Demand Forecasting Using Machine Learning
 
-**A Machine Learning-Based Approach for Next-Day Electricity Demand and Peak Load Forecasting in India**
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Domain-Data%20Science-purple" />
+  <img src="https://img.shields.io/badge/Status-Completed-success" />
+</p>
 
-## Project Overview
+<p align="center">
+  <b>📊 Predicting India's Next-Day Electricity Demand Using Historical Data and Machine Learning</b>
+</p>
 
-This project focuses on forecasting daily peak electricity demand across 36 states and regions in India using Machine Learning techniques.
+---
 
-The study uses historical electricity data from January 2020 to March 2025. It applies time-series feature engineering, statistical analysis, and multiple machine learning approaches to predict next-day electricity demand.
+## 🌟 About The Project
 
-The project also evaluates high-demand day classification and identifies similarities between electricity demand patterns across different regions.
+Electricity demand forecasting plays an important role in power system planning, energy management, and reliable electricity distribution.
 
-## Objectives
+This project focuses on predicting **next-day maximum electricity demand** across 36 states and regions in India using historical electricity consumption and supply-related data.
 
-- Analyze historical electricity demand patterns across Indian states and regions.
-- Forecast next-day maximum electricity demand.
-- Apply and compare five machine learning approaches.
-- Identify high-demand days using classification techniques.
-- Group regions based on electricity demand characteristics.
-- Evaluate model performance against a naive forecasting baseline.
+The study uses machine learning algorithms, historical demand patterns, feature engineering, and statistical analysis to develop and evaluate forecasting models.
 
-## Dataset Description
+📅 **Study Period:** January 2020 – March 2025
 
-- **Dataset:** India Electricity Demand Data
-- **Period:** January 2020 – March 2025
-- **Coverage:** 36 states and regions
-- **Total observations:** 69,012
-- **Target variable:** Max Demand Met (MW)
+📍 **Geographical Coverage:** 36 States and Regions in India
 
-The dataset includes electricity demand, energy supply, peak shortage, drawal schedule, and other electricity-related variables.
+📈 **Dataset Size:** 69,012 observations
 
-The dataset was obtained from Kaggle, with underlying records compiled primarily from publicly available official Indian electricity-sector sources.
+---
 
-## Machine Learning Models
+## 🎯 Project Objectives
 
-Five approaches were implemented:
+- ⚡ Forecast next-day maximum electricity demand.
+- 📊 Analyze historical electricity demand patterns.
+- 🗺️ Study electricity demand variations across Indian states.
+- 🤖 Implement and compare five machine learning approaches.
+- 🔍 Identify high-demand days using classification.
+- 📉 Evaluate forecasting accuracy using performance metrics.
+- 💡 Identify important features influencing electricity demand.
 
-1. **Multiple Linear Regression:** Predicts next-day electricity demand using multiple input variables.
-2. **PCA + Neural Network (MLP):** Uses Principal Component Analysis for dimensionality reduction followed by a Multi-Layer Perceptron.
-3. **Random Forest Regression:** Uses an optimized ensemble of decision trees for demand forecasting.
-4. **Random Forest Classification:** Identifies high-demand days.
-5. **K-Means Clustering:** Groups entities according to electricity demand patterns.
+---
 
-## Methodology
+## 📂 Dataset Information
 
-The project follows these major steps:
-
-1. Data loading and exploration.
-2. Data cleaning and missing-value handling.
-3. Exploratory Data Analysis (EDA).
-4. Historical lag feature generation.
-5. Rolling average and standard deviation calculation.
-6. Calendar and cyclic feature engineering.
-7. Chronological training and testing split.
-8. Machine learning model implementation.
-9. Model evaluation and comparison.
-10. State-wise forecasting and feature importance analysis.
-
-## Technologies Used
-
-- **Programming Language:** Python
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
-- **Machine Learning:** Scikit-learn
-- **Environment:** Jupyter Notebook
-- **Data Format:** CSV
-
-## Results and Performance
-
-The research paper reports the following results:
-
-| Model | Evaluation Result |
+| Attribute | Description |
 |---|---|
-| Random Forest Regression | MAE: 235.19 MW |
-| Random Forest Regression | RMSE: 468.83 MW |
-| Random Forest Regression | R²: 0.9959 |
-| Multiple Linear Regression | R²: 0.9935 |
-| PCA + MLP | R²: 0.9862 |
-| Random Forest Classification | F1 Score: 0.828 |
-| K-Means Clustering | Silhouette Score: 0.565 |
+| Dataset | India Electricity Demand Data |
+| Time Period | January 2020 – March 2025 |
+| Observations | 69,012 |
+| Coverage | 36 States and Regions |
+| Target Variable | Next-Day Demand |
+| Dataset Format | CSV |
 
-Random Forest Regression achieved the best forecasting performance among the evaluated forecasting models.
+**Important Features:**
 
-The study also compares machine learning predictions against a naive baseline that assumes the next day's demand will equal the previous day's demand.
+- 📅 Date
+- 🗺️ State
+- ⚡ Max Demand Met
+- 🔋 Energy Met
+- 📊 Drawl Schedule
+- 📉 Shortage During Peak
+- 📈 Energy Shortage
+- 🔄 Historical Demand Features
 
-## Project Structure
+---
+
+## 🛠️ Technologies & Tools
+
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Data Manipulation | Pandas, NumPy |
+| Data Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Development Environment | Jupyter Notebook |
+| Dataset Format | CSV |
+
+---
+
+## 🤖 Machine Learning Approaches
+
+Five machine learning approaches were implemented in this project.
+
+| No. | Model | Purpose |
+|---|---|---|
+| 1️⃣ | Multiple Linear Regression | Electricity demand prediction |
+| 2️⃣ | PCA + Multi-Layer Perceptron (MLP) | Demand prediction using dimensionality reduction |
+| 3️⃣ | Random Forest Regression | Next-day demand forecasting |
+| 4️⃣ | Random Forest Classification | High-demand day identification |
+| 5️⃣ | K-Means Clustering | Grouping states based on demand characteristics |
+
+---
+
+## 🔬 Project Workflow
 
 ```text
-Electricity-Demand-Forecasting/
-│
-├── PROJECT ELECTRICITY DEMAND FORECASTING.ipynb
-├── India_Elec_data_(Jan2020-Mar2025).csv
-├── Electricity Demand Forecasting Revised.pdf
-└── README.md
+       📂 Dataset Collection
+                |
+                ▼
+       🧹 Data Preprocessing
+                |
+                ▼
+       📊 Exploratory Data Analysis
+                |
+                ▼
+       ⚙️ Feature Engineering
+                |
+                ▼
+       ✂️ Train-Test Split
+                |
+                ▼
+       🤖 Machine Learning Models
+                |
+                ▼
+       📈 Model Evaluation
+                |
+                ▼
+       🏆 Performance Comparison
+                |
+                ▼
+       ⚡ Electricity Demand Forecasting
 ```
 
-## How to Run the Project
+---
 
-1. Clone or download this repository.
-2. Install Python and Jupyter Notebook.
-3. Install the required libraries:
+## 📊 Model Performance & Results
+
+The following results are reported in the research paper.
+
+### ⚡ Regression Performance
+
+| Model | MAE (MW) | RMSE (MW) | R² Score |
+|---|---:|---:|---:|
+| Multiple Linear Regression | 314.88 | 593.56 | 0.9935 |
+| PCA + MLP | 469.86 | 864.91 | 0.9862 |
+| Random Forest Regression | **235.19** | **468.83** | **0.9959** |
+
+### 🎯 Classification Performance
+
+| Metric | Random Forest Classifier |
+|---|---:|
+| F1 Score | 0.8282 |
+| Recall | 0.976 |
+
+### 🔍 Clustering Performance
+
+| Algorithm | Silhouette Score |
+|---|---:|
+| K-Means (3 Clusters) | 0.5652 |
+
+🏆 **Best Forecasting Model: Random Forest Regression**
+
+Random Forest Regression achieved the lowest reported forecasting errors and the highest R² score among the three regression models.
+
+---
+
+## 📈 Evaluation Metrics
+
+The project uses the following evaluation metrics:
+
+- **MAE (Mean Absolute Error):** Measures the average absolute prediction error.
+- **RMSE (Root Mean Squared Error):** Measures prediction errors while penalizing larger errors.
+- **R² Score:** Measures how well the model explains variations in the target variable.
+- **Precision:** Measures the correctness of positive classifications.
+- **Recall:** Measures how many actual high-demand cases are identified.
+- **F1 Score:** Combines precision and recall.
+- **Silhouette Score:** Evaluates the quality of clustering.
+
+---
+
+## 📁 Repository Structure
+
+```text
+⚡ Electricity-Demand-Forecasting/
+│
+├── 📓 PROJECT ELECTRICITY DEMAND FORECASTING.ipynb
+│
+├── 📂 India_Elec_data_(Jan2020-Mar2025).csv
+│
+├── 📄 Electricity Demand Forecasting Revised.pdf
+│
+└── 📘 README.md
+```
+
+---
+
+## 🚀 How to Run This Project
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Saimoukthika25/Electricity-Demand-Forecasting.git
+```
+
+### 2️⃣ Navigate to the Project Directory
+
+```bash
+cd Electricity-Demand-Forecasting
+```
+
+### 3️⃣ Install Required Libraries
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-4. Open the Jupyter Notebook:
+### 4️⃣ Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-5. Open `PROJECT ELECTRICITY DEMAND FORECASTING.ipynb`.
-6. Ensure the CSV dataset is in the same directory as the notebook.
-7. Run the notebook cells sequentially.
+### 5️⃣ Execute the Project
 
-## Research Paper
-
-The complete research paper is available in this repository:
-
-**Electricity Demand Forecasting Revised.pdf**
-
-It describes the dataset, methodology, machine learning approaches, experimental results, and conclusions.
-
-## Conclusion
-
-This project demonstrates the application of machine learning techniques to electricity demand forecasting in India.
-
-The results indicate that Random Forest Regression can provide accurate next-day demand predictions. However, comparison with a naive baseline highlights the importance of evaluating forecasting models against simple real-world benchmarks.
-
-The study provides insights into electricity demand patterns and the potential use of machine learning in power system planning.
+1. Open `PROJECT ELECTRICITY DEMAND FORECASTING.ipynb`.
+2. Ensure the CSV dataset is in the same directory.
+3. Run the notebook cells sequentially.
+4. Explore the analysis, predictions, visualizations, and model comparisons.
 
 ---
 
-**Author:** Thanda Sai Moukthika  
-**Department:** Computer Science and Engineering  
-**University:** Lovely Professional University, Punjab, India
+## 📄 Research Paper
 
-**Project Domain:** Data Science | Machine Learning | Electricity Demand Forecasting
+📚 The complete research paper is included in this repository.
+
+**File:** `Electricity Demand Forecasting Revised.pdf`
+
+The paper covers:
+
+- Introduction and research background.
+- Dataset description and methodology.
+- Feature engineering and machine learning techniques.
+- Experimental results and model comparisons.
+- Conclusions and future scope.
+
+---
+
+## 🔮 Future Scope
+
+- 🌦️ Integrate weather and temperature information.
+- 🧠 Explore advanced deep learning forecasting models.
+- 📊 Develop an interactive electricity demand dashboard.
+- ⚡ Improve forecasting for individual states and regions.
+- 🔄 Integrate real-time electricity demand data.
+
+---
+
+## 👩‍💻 Author
+
+**Thanda Sai Moukthika**
+
+🎓 B.Tech – Computer Science and Engineering  
+📍 Lovely Professional University, Punjab, India
+
+**Areas of Interest:** Data Science | Machine Learning | Artificial Intelligence | Predictive Analytics
+
+---
+
+<p align="center">
+  ⭐ If you find this project interesting, consider giving this repository a star!
+</p>
+
+<p align="center">
+  <b>⚡ Turning Historical Electricity Data into Intelligent Demand Forecasts ⚡</b>
+</p>
